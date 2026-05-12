@@ -334,7 +334,7 @@
                         const monthNum = ((r.period-1)%12) + 1;
                         const periodLabel = `第${yearNum}年${monthNum}月`;
                         
-                        tr.innerHTML = `<td>${r.period} (${periodLabel})</td><td>${r.date}</td><td>HKD ${fmt(r.payment)}</td><td>HKD ${fmt(r.interest)}</td><td>HKD ${fmt(r.principal)}</td><td>HKD ${fmt(r.balance)}</td><td>HKD ${fmt(r.monthlyOffset)}<br/><strong style="color:red;">(建議HKD ${fmt((r.balance/2) + r.payment + 1000)})</strong></td><td>HKD ${fmt(r.monthlyOffsetAdjusted)}</td><td>HKD ${fmt(r.payment - r.monthlyOffsetAdjusted)}</td>`;
+                        tr.innerHTML = `<td>${r.period} (${periodLabel})</td><td>${r.date}</td><td>HKD ${fmt(r.payment)}</td><td>HKD ${fmt(r.interest)}</td><td>HKD ${fmt(r.principal)}</td><td>HKD ${fmt(r.balance)}</td><td>HKD ${fmt(r.monthlyOffset)}<br/><strong style="color:red;">HKD ${fmt((r.balance/2) + r.payment + 1000)}</strong></td><td>HKD ${fmt(r.monthlyOffsetAdjusted)}</td><td>HKD ${fmt(r.payment - r.monthlyOffsetAdjusted)}</td>`;
                         tbody.appendChild(tr);
                     }
                 }
