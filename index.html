@@ -324,7 +324,7 @@
                     $('months').textContent = `${res.months}（約 ${(res.months/12).toFixed(2)} 年）`;
                     $('totalInterest').textContent = 'HKD ' + fmt(res.totalInterest);
                     $('totalPayment').textContent = 'HKD ' + fmt(res.totalPayment);
-                    $('totalOffset').textContent = 'HKD ' + fmt(res.cumulativeOffset);
+                    $('totalOffset').innerHTML = 'HKD ' + fmt(res.cumulativeOffset) + '<br/><small style="color:red;">('+ fmt(res.cumulativeOffset + res.stdPayment)+')</small>';
                     $('totalPaymentOffset').textContent = 'HKD ' + fmt(res.totalPayment - res.cumulativeOffset);
                     const tbody = document.querySelector('#scheduleTable tbody');
                     tbody.innerHTML = '';
